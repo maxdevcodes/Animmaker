@@ -1,0 +1,85 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #d2d2d2;
+}
+
+.animation {
+    position: relative;
+    height: 30px;
+    width: 50px;
+}
+.animation span {
+    position: absolute;
+    background-color: #011920;
+    width: 50px;
+    height: 10px;
+    transition: .6s .6s top, .6s .6s bottom, .6s transform;
+}
+.animation:hover span {
+    transition: .6s top, .6s bottom, .6s .6s transform;
+}
+.animation span:nth-of-type(1) {
+    top: 0;
+    animation: 3s top infinite;
+}
+.animation span:nth-of-type(2) {
+    bottom: 0;
+    animation: 3s bot infinite;
+}
+.animation:hover span:nth-of-type(1) {
+    top: 10px;
+    transform: rotate(45deg);
+}
+.animation:hover span:nth-of-type(2) {
+    bottom: 10px;
+    transform: rotate(-45deg);
+}
+
+@keyframes top{
+    0% {
+        top: 0;
+    }
+    25% {
+        top: 10px;
+        transform: rotate(0deg);
+    }
+
+    50% {
+        top: 10px;
+        transform: rotate(45deg);
+    }
+
+    75% {
+        top: 10px;
+        transform: rotate(0deg);
+    }
+    100% {
+        top: 0;
+    }
+}
+
+@keyframes bot{
+    0% {
+        bottom: 0;
+    }
+    25% {
+        bottom: 10px;
+        transform: rotate(0deg);
+    }
+
+    50% {
+        bottom: 10px;
+        transform: rotate(-45deg);
+    }
+
+    75% {
+        bottom: 10px;
+        transform: rotate(0deg);
+    }
+    100% {
+        bottom: 0;
+    }
+}
