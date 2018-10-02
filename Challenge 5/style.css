@@ -1,0 +1,47 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.animation {
+    width: 120px;
+    height: 140px;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+
+.animation div {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(55, 69, 156, 1);
+    opacity: .4;
+    animation: opacity 1.6s infinite;
+}
+
+.animation div:nth-of-type(1) {
+    animation-delay: -1.6s;
+}
+.animation div:nth-of-type(2) {
+    animation-delay: -1.2s;
+}
+.animation div:nth-of-type(4) {
+    animation-delay: -.8s;
+}
+.animation div:nth-of-type(3) {
+    animation-delay: -.4s;
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: .4;
+    }
+
+}
