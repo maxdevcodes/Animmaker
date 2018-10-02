@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.animation {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row-reverse;
+    width: 100px;
+}
+
+.star {
+    width: 20px;
+    height: 20px;
+}
+
+svg,
+polygon {
+    width: 20px;
+    height: 20px;
+    fill: #ddd!important;
+}
+
+.star:hover *,
+.star:hover {
+    fill: yellow!important;
+    animation: jump .5s ease-out;
+    cursor: pointer;
+}
+
+.star:hover ~ .star * {
+    fill: yellow!important;
+    
+}
+
+@keyframes jump {
+    40% {
+        transform: translateY(-5px);
+    }
+    90% {
+        transform: translateY(1px);
+    }
+}
