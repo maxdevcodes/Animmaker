@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+p {
+    font-size: 20px;
+}
+
+.box {
+    width: 200px;
+    height: 80px;
+    background: #1ab1d6;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box:hover {
+    animation: anim .8s cubic-bezier(1,1,0,0);
+}
+
+@keyframes anim {
+    0% {
+        width: 200px;
+    }
+    25% {
+        width: 180px;
+        height: 80px;
+        filter: blur(2px);
+    }
+    50% {
+        height: 60px;
+        width: 180px;
+        filter: blur(4px);
+    }
+    75% {
+        height: 80px;
+        width: 200px;
+        filter: blur(2px);
+    }
+}
