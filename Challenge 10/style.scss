@@ -1,0 +1,47 @@
+$primary-color: #021920;
+$secondary-color: #D13367;
+
+$box-size: 200px;
+$sec-box-size: $box-size/2;
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    background: $primary-color;
+    width: $box-size;
+    height: $box-size;
+    display: flex;
+    flex-flow: wrap;
+    overflow: hidden;
+
+    div {
+        background: $secondary-color;
+        width: $sec-box-size;
+        height: $sec-box-size;
+        transition: transform .8s ease-in-out;
+
+        &:nth-child(1) {
+            transform: translate(-$sec-box-size, -$sec-box-size);
+        }
+        &:nth-child(2) {
+            transform: translate($sec-box-size, -$sec-box-size);
+        }
+        &:nth-child(3) {
+            transform: translate(-$sec-box-size, $sec-box-size);
+        }
+        &:nth-child(4) {
+            transform: translate($sec-box-size, $sec-box-size);
+        }
+    }
+
+    &:hover > div {
+        transform: translate(0px,0);
+        transition: transform .8s ease-in-out;
+    }
+}
+
