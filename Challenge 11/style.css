@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+a,h3 {
+    color: #fff;
+}
+
+.card {
+    background: linear-gradient(45deg, #2b58c9, #1646be);
+    border-radius: 20px;
+    width: 380px;
+    height: 480px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.avatar img {
+    max-width: 120px;
+    margin: 10px;
+    border-radius: 100%;
+    padding: 30px 0;
+}
+
+.summary {
+    transition: all .6s .8s;
+}
+
+.skills-container {
+    position: absolute;
+    width: 380px;
+    padding: 10px 20px;
+    bottom: -300px;
+    border-radius: 20px;
+    background-color: #fff;
+    transition: all .8s;
+}
+
+.skills-container h4{
+    text-transform: uppercase;
+    margin: 20px 0;
+    font-size: 26px;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.skills a {
+    flex-basis: 25%;
+    margin: 10px 0;
+}
+
+.skills img {
+    max-width: 80px;
+}
+
+.card:hover .summary {
+    opacity: 0;
+    transition: all .6s;
+}
+
+.card:hover .skills-container {
+    bottom: 0;
+    transition: all .8s .6s;
+}
